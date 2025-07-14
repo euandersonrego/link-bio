@@ -140,7 +140,7 @@
             backdrop-filter: blur(10px);
         }
         
-        .link-button:hover {
+        .link-button:hover:not(.disabled-button) {
             background-color: rgba(0, 245, 195, 0.15); transform: translateY(-4px); box-shadow: 0 0 20px var(--highlight-glow); border-color: var(--highlight-main);
         }
 
@@ -202,7 +202,7 @@
                  </div>
             </header>
             
-            <p id="description" class="boot-animation text-base mb-8">Ajudo empresas a transformar cliques em clientes, sem complicações.</p>
+            <p id="description" class="boot-animation text-base mb-8">Sua empresa com mais clientes e faturamento. Minha especialidade é usar Inteligência Artificial para criar campanhas de tráfego que geram impacto e vendas reais.</p>
 
             <main id="main-buttons" class="boot-animation w-full space-y-4">
                 <a id="consultancy-link" href="#" class="link-button primary-button">
@@ -216,6 +216,10 @@
                     </a>
                     <p class="text-xs text-slate-500 mt-2">Em breve... O curso está em fase de gravação!</p>
                 </div>
+                <a href="https://kit-gestor-de-trafego.netlify.app/" target="_blank" class="link-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                    <span>Baixar Kit p/ Gestor</span>
+                </a>
             </main>
         </div>
         <footer class="footer">
