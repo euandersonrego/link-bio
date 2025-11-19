@@ -191,6 +191,10 @@
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="23 7 16 12 23 17 23 7"></polygon><rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect></svg>
                     <span>Shorts Milionários</span>
                 </a>
+                <a id="youtuber-link" href="https://pay.hotmart.com/G96243158H?off=bo0ok8hg&checkoutMode=10&bid=1763062635791" target="_blank" class="link-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+                    <span>Youtuber Milionário</span>
+                </a>
                 <a id="ebook-link" href="https://roube-meus-prompts.netlify.app/" target="_blank" class="link-button">
                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
                     <span>Roube Meus Prompts</span>
@@ -210,6 +214,7 @@
     document.addEventListener('DOMContentLoaded', () => {
         // --- Adiciona eventos de clique para rastreamento ---
         const courseBtn = document.getElementById('course-link');
+        const youtuberBtn = document.getElementById('youtuber-link');
         const ebookBtn = document.getElementById('ebook-link');
         const contactBtn = document.getElementById('contact-link');
 
@@ -217,6 +222,13 @@
             if(typeof fbq === 'function') fbq('track', 'InitiateCheckout', { content_name: 'Curso IA' });
             if(typeof gtag === 'function') gtag('event', 'begin_checkout', { 'items': [{'item_name': 'Curso IA'}] });
         });
+
+        if(youtuberBtn) {
+            youtuberBtn.addEventListener('click', () => {
+                if(typeof fbq === 'function') fbq('track', 'InitiateCheckout', { content_name: 'Youtuber Milionario' });
+                if(typeof gtag === 'function') gtag('event', 'begin_checkout', { 'items': [{'item_name': 'Youtuber Milionario'}] });
+            });
+        }
 
         ebookBtn.addEventListener('click', () => {
             if(typeof fbq === 'function') fbq('track', 'InitiateCheckout', { content_name: 'Ebook IA' });
@@ -354,7 +366,3 @@
 
 </body>
 </html>
-
-
-
-
